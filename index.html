@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>2048</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="title-wrap">
+        <h1 class="title">2048</h1>
+        <p class="subtitle">合并数字，挑战 2048！</p>
+      </div>
+      <div class="scores">
+        <div class="score-box">
+          <span class="score-label">得分</span>
+          <span class="score-value" id="score">0</span>
+        </div>
+        <div class="score-box">
+          <span class="score-label">最高分</span>
+          <span class="score-value" id="best">0</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="toolbar">
+      <button class="btn" id="new-game">新游戏</button>
+      <div class="hint">用 <b>方向键</b> / <b>WASD</b> 移动，手机上可滑动</div>
+    </div>
+
+    <div class="board-wrap">
+      <div class="board" id="board">
+        <div class="grid-bg" id="grid-bg"></div>
+        <div class="tile-layer" id="tile-layer"></div>
+      </div>
+      <div class="overlay" id="overlay">
+        <div class="overlay-content">
+          <h2 class="overlay-title" id="overlay-title">游戏结束</h2>
+          <p class="overlay-text" id="overlay-text">最终得分：0</p>
+          <div class="overlay-btns">
+            <button class="btn btn-primary" id="overlay-retry">再来一局</button>
+            <button class="btn" id="overlay-keep">继续挑战</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p>提示：相同数字相撞会合并，目标是拼出 <b>2048</b> 方块。</p>
+    </footer>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
